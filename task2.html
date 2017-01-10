@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>PHP task 2</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body>
+	<div id="header"></div>
+	<br>	
+	<div class="col-md-12">		
+		<div class="row col-md-offset-2 col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<strong>Завдання 2</strong>
+				</div>
+				<div class="panel-body">					
+					У форму вводиться текст, слова в якому розділені пробілами і
+					розділовими знаками. Вилучити з цього тексту всі слова найбільшої
+					довжини. (Слів найбільшої довжини може бути декілька).			
+				</div>
+			</div>
+		</div>	
+	</div>
+	<br>
+<div class="col-md-12">	
+	<div class="row col-md-offset-2 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<strong><span id="task-panel-heading">Введіть дані для розв'язку завдання 2</span></strong>
+			</div>
+			<div id="task-panel-body" class="panel-body">
+				<div id="answer-block" class="row text-center hidden col-md-offset-1 col-md-10">
+					<br>
+					<div id="answer-text" class="row text-center">
+					</div>
+					<button	id="btn-repeat" class="btn btn-default" type="button">Повторити</button>
+				</div>
+				<div id="error-msg-block" class="row hidden">
+					<div class="alert alert-danger text-center" role="alert">					
+						<span class="sr-only">Error:</span>
+						<span id="error-msg-txt">	
+						</span>
+					</div>
+				</div>			
+				<form id="form" class="form-horizontal">						
+					<div class="form-group">
+						<div>
+							<textarea id="input-data" type="text" class="form-control" placeholder="Введіть текст ..."></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="text-center">
+							<button id="compute-btn" type="button" class="btn btn-default">Вилучити найдовше(найдовші) слова</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/page_elements.js"></script>
+<script src="js/task_ajax.js"></script>
+<script> taskAJAX('task2','Текст для аналізу не задано'); </script>
+</body>
+</html>
